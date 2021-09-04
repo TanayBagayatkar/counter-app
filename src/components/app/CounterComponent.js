@@ -25,10 +25,13 @@ function CounterComponent(props) {
         }
         const temp = document.getElementById("txt");
         const container = document.getElementById("container");
-        console.log(container);
         if(currCounterValue>99){
             temp.style.width="38px";
             container.style.width="200px";
+        }else{
+            temp.style.width="30px";
+            container.style.width="180px";
+
         }
         
     }, [currCounterValue, initialValue, maxValue])
