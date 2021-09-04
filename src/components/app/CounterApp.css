@@ -1,0 +1,57 @@
+/* body{
+  
+    
+    
+}
+.temp{
+     
+    width: 257px;
+    height: 130px;
+}
+
+.button{
+    padding: 5px;
+} */
+
+.plus-button {
+    width: 60px;
+    height: 56px;
+    border: 1px solid #b24242;
+    border-left: 0px;
+    background-color: #b24242;
+    color: #ffffff;
+    border-radius: 0px 6px 6px 0px;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 14px;
+    text-align: center;
+}
+
+.minus-button {
+    width: 60px;
+    height: 56px;
+    border: 1px solid #b24242;
+    border-right: 0px;
+    background-color: #ffffff;
+    color: #b24242;
+    border-radius: 6px 0px 0px 6px;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 14px;
+    text-align: center;
+}
+
+.num-input {
+    width: 60px;
+    height: 26px;
+    border: 1px solid #b24242;
+    background-color: #fbe8e8;
+    color: #b24242;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 14px;
+    text-align: center;
+}
