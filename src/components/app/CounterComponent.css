@@ -39,6 +39,9 @@ body {
 .num-input {
     width: 30px;
     height: 26px;
+    /* min-width:30px!important; */
+  /* max-width:99.99%!important; */
+  /* transition: width 0.25s; */
     border: 1px solid #b24242;
     background-color: #fbe8e8;
     color: #b24242;

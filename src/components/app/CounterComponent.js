@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './CounterComponent.css';
 
 function CounterComponent(props) {
-
     const [currCounterValue, setCurrCounterValue] = useState(1);
     const [initialValue, setInitialValue] = useState(1);
     const [maxValue, setMaxValue] = useState(1000);
 
+    // To remember the state of counter:
     // useEffect(() => {
     //     const counterFromLocalStorage = Number(localStorage.getItem('counter'));
     //     if (counterFromLocalStorage) {
@@ -14,28 +14,24 @@ function CounterComponent(props) {
     //     }
     // }, [])
 
-    // useEffect(() => {
-    //     localStorage.setItem('counter', currCounterValue.toString());
-    // }, [currCounterValue])
-
-    // useEffect(() => {
-    //     const counterFromLocalStorage = Number(localStorage.getItem('counter'));
-    //     if (counterFromLocalStorage <= initialValue && isFinite(initialValue)) {
-    //         setCounter(initialValue);
-    //     }
-    // }, [initialValue])
-
-    // useEffect(() => {
-    //     const counterFromLocalStorage = Number(localStorage.getItem('counter'));
-    //     if (!isFinite(maxValue)) {
-    //         setCounter(1000);
-    //     }
-    //     else if (counterFromLocalStorage >= maxValue) {
-    //         setCounter(maxValue);
-    //     }
-    // }, [maxValue])
-
-
+    useEffect(() => {
+        if (currCounterValue === maxValue) {
+            alert('Reached Maximum Counter Value');
+            setCurrCounterValue(currCounterValue - 1);
+        }
+        if (currCounterValue < initialValue) {
+            alert('Reached at Start of Counter');
+            setCurrCounterValue(1);
+        }
+        const temp = document.getElementById("txt");
+        const container = document.getElementById("container");
+        console.log(container);
+        if(currCounterValue>99){
+            temp.style.width="38px";
+            container.style.width="200px";
+        }
+        
+    }, [currCounterValue, initialValue, maxValue])
 
     const setCounterWithValue = value => () => {
         const val = Number(value);
@@ -48,7 +44,7 @@ function CounterComponent(props) {
     }
 
     const handleInputChange = (e) => {
-        // setInputVal(e.target.value);
+
         const value = Number(e.target.value);
 
         if (isNaN(value)) {
@@ -59,32 +55,31 @@ function CounterComponent(props) {
                 alert(`Value cannot be greater than ${maxValue}`);
             }
 
-            // else if (value < initialValue) {
-            //     alert(`Value cannot be less than ${initialValue} `);
-            // }
-
             else {
                 setCurrCounterValue(value);
             }
         }
     }
 
-    const increaseSize = (e) => {
-        const width = 'px';
-        
-        // e.target.style.width= ((currCounterValue.toString().length)*8) + width;
-    }
+
+    
+// const st=true;
+//     let textAreaStyle = {
+//         if(currCounterValue>2){
+
+//         }
+//   };
+
+
     return (
         <>
-            <div className="container">
+            <div id="container" className="container">
                 <input type="button" onClick={setCounterWithValue(currCounterValue - 1)} disabled={currCounterValue <= initialValue} className="minus-button" value="-" />
-                <input className="num-input" onChange={handleInputChange} onKeyPress={increaseSize} value={currCounterValue}  />
+                <input id="txt" className="num-input" onChange={handleInputChange} value={currCounterValue} />
                 <input type="button" onClick={setCounterWithValue(currCounterValue + 1)} disabled={currCounterValue >= maxValue} className="plus-button" value="+" />
 
             </div>
-
         </>
-
     );
 }
 
