@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import CounterApp from './components/app/CounterApp';
+import CounterComponent from './components/app/CounterComponent';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CounterApp />
+    <CounterComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,103 @@
+body {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 180px);
+    align-content: center;
+    justify-content: center;
+}
+
+.plus-button {
+    width: 60px;
+    height: 56px;
+    margin: 0px;
+    padding: 14px;
+    text-align: center;
+    border: 1px solid #b24242;
+    border-radius: 0px 6px 6px 0px;
+    border-left: 0px;
+    background-color: #b24242;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: bold;
+
+}
+
+.minus-button {
+    width: 60px;
+    height: 56px;
+    border: 1px solid #b24242;
+    border-right: 0px;
+    background-color: #ffffff;
+    color: #b24242;
+    border-radius: 6px 0px 0px 6px;
+    font-size: 21px;
+    margin: 0px;
+    padding: 14px;
+    text-align: center;
+}
+
+.num-input {
+    width: 30px;
+    height: 26px;
+    border: 1px solid #b24242;
+    background-color: #fbe8e8;
+    color: #b24242;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+    padding: 14px;
+    text-align: center;
+}
+
+@media screen and (max-width:150px) {
+    body {
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    }
+    .plus-button {
+        width: 60px;
+        height: 56px;
+        border: 1px solid #b24242;
+        border-left: 0px;
+        background-color: #b24242;
+        color: #ffffff;
+        border-radius: 6px 6px 6px 6px;
+        font-size: 21px;
+        font-weight: bold;
+        margin: 0px;
+        padding: 14px;
+        text-align: center;
+    }
+    .minus-button {
+        width: 60px;
+        height: 56px;
+        border: 1px solid #b24242;
+        background-color: #ffffff;
+        color: #b24242;
+        border-radius: 6px 6px 6px 6px;
+        font-size: 21px;
+        margin: 0px;
+        padding: 14px;
+        text-align: center;
+    }
+    .num-input {
+        width: 30px;
+        height: 26px;
+        border: 1px solid #b24242;
+        background-color: #fbe8e8;
+        color: #b24242;
+        border-radius: 6px 6px 6px 6px;
+        font-size: 21px;
+        font-weight: bold;
+        font-family: 'Nunito', sans-serif;
+        margin: 0px;
+        padding: 14px;
+        text-align: center;
+    }
+}
