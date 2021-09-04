@@ -41,7 +41,9 @@ function CounterComponent(props) {
         if (!isNaN(val)) {
             setCurrCounterValue(value);
         }
+        
         else {
+            
             setCurrCounterValue(initialValue);
         }
     }
